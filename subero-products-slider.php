@@ -68,6 +68,8 @@ class Subero_Products_Slider {
 			if ( $attributes['product_ids'] != '' ) {
 				$product_ids = ($attributes['product_ids'] == '') ? array() : array_map('intval', explode(',', $attributes['product_ids']) );
 				$query_args['post__in'] = array_intersect( wc_get_product_ids_on_sale(), $product_ids );
+			} else {
+				$query_args['post__in'] = array_merge( array( 0 ), wc_get_product_ids_on_sale() );
 			}
 		}
 		
@@ -77,10 +79,7 @@ class Subero_Products_Slider {
 
 		<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 			<div class="sb-slide">
-				<?php
-				// Revisar si puedo reemplazar este template en mi plugin
-				wc_get_template_part('content', 'product');
-				?>
+				<?php wc_get_template_part('content', 'product'); ?>
 			</div>
 		<?php endwhile; else : ?>
 			<p><?php esc_html_e( 'No products found' ); ?></p>
