@@ -6,7 +6,7 @@ Description: Shortcodes for displaying WooCommerce Products Sliders
 Version:     1.0
 Author:      Isaías Subero
 Author URI:  http://isaiassubero.com
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: wcp
 Domain Path: /languages
 License:     GPL3
