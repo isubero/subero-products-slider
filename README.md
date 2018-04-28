@@ -1,5 +1,5 @@
 # Subero Products Slider
-Shortcode for displaying WooCommerce Products Sliders
+Shortcode for displaying easily displaying responsive WooCommerce Products Sliders. If you are not familiar with WordPress shortcodes, you can [read about this functionality here](https://codex.wordpress.org/shortcode).
 
 ## Shortcode arguments
 
