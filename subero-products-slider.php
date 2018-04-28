@@ -41,21 +41,36 @@ class Subero_Products_Slider {
 
 	private function get_slider_content($attributes) {
 
-		$query_args = array();
+		$limit = ($attributes['limit'] == 'false') ? -1 : $attributes['limit'];
 
 		$query_args = array(
-			'posts_per_page'    => -1,
+			'posts_per_page'    => $limit,
 			'no_found_rows'     => 1,
 			'post_status'       => 'publish',
-			'post_type'         => 'product',
-			'product_cat'		=> $attributes['category']
+			'post_type'         => 'product'
 		);
 
-		if ( $attributes['on_sale'] == 'true' ) {
-			$query_args['meta_query'] = WC()->query->get_meta_query();
-			$query_args['post__in'] = array_merge( array( 0 ), wc_get_product_ids_on_sale() );
+		if ($attributes['product_ids'] != '') {
+			$query_args['post__in'] = array_map('intval', explode(',', $attributes['product_ids']) );
 		}
 
+		if ($attributes['category'] != '') {
+			$query_args['product_cat'] = $attributes['category'];
+		}
+
+		if ( $attributes['on_sale'] == 'true' ) {
+			
+			if ( $attributes['category'] != '' && $attributes['product_ids'] == '' ) { 
+				//$query_args['meta_query'] = WC()->query->get_meta_query();
+				$query_args['post__in'] = array_merge( array( 0 ), wc_get_product_ids_on_sale() );
+			}
+
+			if ( $attributes['product_ids'] != '' ) {
+				$product_ids = ($attributes['product_ids'] == '') ? array() : array_map('intval', explode(',', $attributes['product_ids']) );
+				$query_args['post__in'] = array_intersect( wc_get_product_ids_on_sale(), $product_ids );
+			}
+		}
+		
 		$query = new WP_Query( $query_args );
 
 		echo '<div id="sb-products-slider" class="sb-products-slider woocommerce">'; ?>
@@ -86,8 +101,10 @@ class Subero_Products_Slider {
 	public function shortcode_callback($atts) {
 
 		$attributes = shortcode_atts( array(
-			'category' => '',
-			'on_sale' => 'false'
+			'product_ids'	=> '',
+			'category'		=> '',
+			'on_sale'		=> 'false',
+			'limit'			=> 10,
 		), $atts);
 
 		ob_start();
