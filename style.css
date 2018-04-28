@@ -1,0 +1,53 @@
+#sb-products-slider .slick-next:before,
+#sb-products-slider .slick-prev:before {
+  color: #ccc !important; }
+#sb-products-slider .slick-slide img {
+  margin: auto; }
+#sb-products-slider .slick-dots button:focus {
+  box-shadow: none;
+  color: #000; }
+#sb-products-slider li.product {
+  list-style: none;
+  text-align: center; }
+#sb-products-slider span.onsale {
+  display: none; }
+#sb-products-slider .star-rating {
+  display: block;
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px; }
+#sb-products-slider .star-rating span {
+  font-family: "star"; }
+#sb-products-slider .woocommerce-loop-product__title {
+  color: #808080;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 5px; }
+#sb-products-slider .price {
+  display: block;
+  text-align: center; }
+  #sb-products-slider .price del {
+    color: #aaa; }
+  #sb-products-slider .price ins {
+    background: transparent;
+    color: #0cb50c;
+    font-weight: 700; }
+#sb-products-slider a.button.add-to-cart-button,
+#sb-products-slider a.button.product_type_variable.add_to_cart_button {
+  display: inline-block;
+  padding: 10px 5px;
+  margin: 5px; }
+
+/* Swipe for more */
+.swipe-for-more {
+  text-align: center;
+  color: #888; }
+  .swipe-for-more img {
+    width: 45px; }
+  @media (min-width: 768px) {
+    .swipe-for-more {
+      display: none; } }
+
+/*# sourceMappingURL=style.css.map */
