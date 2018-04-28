@@ -1,12 +1,16 @@
 # Subero Products Slider
 Shortcode to easily and beautifully display a responsive slider of woocommere products. If you are not familiar with WordPress shortcodes, you can [read about this functionality here](https://codex.wordpress.org/shortcode).
 
+[subero_products_slider]
+
+Default use shows 10 recent products. You may use the arguments to customize the slider.
+
 ## Shortcode arguments
 
 ### product_ids
 Enter the IDs of the products you want to be present in the slider. ID's **must be separated by commas**.
 
-Example: [subero_products_slider products_ids="532, 147, 5621"]
+Example: [subero_products_slider product_ids="532, 147, 5621"]
 
 ### category
 Indicates the **category slug** used to query products.
