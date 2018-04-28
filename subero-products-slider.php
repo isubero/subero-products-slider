@@ -116,6 +116,7 @@ class Subero_Products_Slider {
 	public function initialize_slider() {
 		?>
 			<script>
+			jQuery(document).ready(function() {
 				jQuery('.sb-products-slider').slick({
 					accessibility: true,
 					arrows: true,
@@ -155,6 +156,7 @@ class Subero_Products_Slider {
 						// instead of a settings object
 					]
 				});
+			});
 			</script>
 		<?php 
 	}
