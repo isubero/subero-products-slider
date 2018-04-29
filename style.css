@@ -41,13 +41,13 @@
   margin: 5px; }
 
 /* Swipe for more */
-.swipe-for-more {
+.sps-swipe-for-more {
   text-align: center;
   color: #888; }
-  .swipe-for-more img {
+  .sps-swipe-for-more img {
     width: 45px; }
   @media (min-width: 768px) {
-    .swipe-for-more {
+    .sps-swipe-for-more {
       display: none; } }
 
 /*# sourceMappingURL=style.css.map */

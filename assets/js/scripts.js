@@ -56,11 +56,12 @@ jQuery(document).ready(function() {
             
             slider.innerHTML = response;
             
+            // Parse response string into an html node.
             let parser = new DOMParser();
-            let doc = parser.parseFromString(response, "text/html");
-            let element = doc.querySelector('.subero-products-slider');
+            let document = parser.parseFromString(response, "text/html");
+            let htmlElement = document.querySelector('.subero-products-slider');
             
-            initializeSuberoProductsSlider( element.getAttribute('id') );
+            initializeSuberoProductsSlider( htmlElement.getAttribute('id') );
 
         });
     
