@@ -121,7 +121,7 @@ class Subero_Products_Slider {
 						on-sale="'.$attributes['on_sale'].'"
 						limit="'.$attributes['limit'].'"
 					>
-						Loading...
+						<div class="sps-loader"></div>
 					</div>';
 		
 		return $content;

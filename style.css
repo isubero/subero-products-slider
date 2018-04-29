@@ -50,4 +50,20 @@
     .sps-swipe-for-more {
       display: none; } }
 
+/* Loader */
+.sps-loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #22a7f0;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: sps-spin 1s linear infinite;
+  margin: auto; }
+
+@keyframes sps-spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 /*# sourceMappingURL=style.css.map */
