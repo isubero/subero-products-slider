@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
             let document = parser.parseFromString(response, "text/html");
             let htmlElement = document.querySelector('.subero-products-slider');
             
-            initializeSuberoProductsSlider( htmlElement.getAttribute('id') );
+            initializeSuberoProductsSlider( htmlElement.getAttribute('slider-id') );
 
         });
     

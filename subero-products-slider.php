@@ -82,7 +82,7 @@ class Subero_Products_Slider {
 
 		$slider_id = uniqid('sps_');
 
-		echo '<div id="'.$slider_id .'" class="subero-products-slider woocommerce '.$slider_id .'">'; ?>
+		echo '<div id="subero-products-slider" slider-id="'.$slider_id.'" class="subero-products-slider woocommerce '.$slider_id .'">'; ?>
 
 		<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 			<div class="sb-slide">
