@@ -39,9 +39,9 @@ class Subero_Products_Slider {
 		wp_enqueue_script( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), '1.8.1', true);
 		wp_enqueue_style( 'slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', '', '1.8.1' );
 		
-		wp_enqueue_style( 'subero-products-slider', plugin_dir_url(__FILE__) . 'style.css', '', '1.1' );
+		wp_enqueue_style( 'subero-products-slider', plugin_dir_url(__FILE__) . 'css/style.css', 'slick-theme', '110518' );
 		
-		wp_enqueue_script( 'sb-products-slider',  plugins_url( 'assets/js/scripts.js', __FILE__ ), array('jquery', 'slick'), '1.0', true);
+		wp_enqueue_script( 'sb-products-slider',  plugins_url( 'js/scripts.js', __FILE__ ), array('jquery', 'slick'), '1.0', true);
 		wp_localize_script( 'sb-products-slider', 'sps_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 

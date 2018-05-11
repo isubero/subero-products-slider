@@ -10,6 +10,8 @@
     }
 
     .slick-dots {
+        text-align: center;
+
         button:focus {
             box-shadow: none;
             color: #000;
@@ -71,7 +73,12 @@
 
 /* Swipe for more */
 .sps-swipe-for-more {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-top: 10px;
     color: #888;
 
     img {

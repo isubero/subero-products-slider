@@ -3,9 +3,11 @@
   color: #ccc !important; }
 #subero-products-slider .slick-slide img {
   margin: auto; }
-#subero-products-slider .slick-dots button:focus {
-  box-shadow: none;
-  color: #000; }
+#subero-products-slider .slick-dots {
+  text-align: center; }
+  #subero-products-slider .slick-dots button:focus {
+    box-shadow: none;
+    color: #000; }
 #subero-products-slider li.product {
   list-style: none;
   text-align: center; }
@@ -42,7 +44,12 @@
 
 /* Swipe for more */
 .sps-swipe-for-more {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-top: 10px;
   color: #888; }
   .sps-swipe-for-more img {
     width: 45px; }
