@@ -1,6 +1,6 @@
 function initializeSuberoProductsSlider( element_id ) {
 
-    jQuery('.' + element_id).slick({
+    jQuery('.' + element_id).not('.slick-initialized').slick({
         accessibility: true,
         arrows: true,
         dots: true,
@@ -58,8 +58,8 @@ jQuery(document).ready(function() {
             
             // Parse response string into an html node.
             let parser = new DOMParser();
-            let document = parser.parseFromString(response, "text/html");
-            let htmlElement = document.querySelector('.subero-products-slider');
+            let modalDocument = parser.parseFromString(response, "text/html");
+            let htmlElement = modalDocument.querySelector('.subero-products-slider');
             
             initializeSuberoProductsSlider( htmlElement.getAttribute('slider-id') );
 
